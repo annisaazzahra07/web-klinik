@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Sehat - UTS Prak. Pemrograman Web Dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Klinik Sehat Sentosa</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#registrasi">Registrasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="beranda">
+        <section id="layanan">
+            <h2 class="section-title">Layanan Unggulan Kami</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Poli Umum</h3>
+                    <p>Pemeriksaan kesehatan rutin oleh dokter berpengalaman.</p>
+                </div>
+                <div class="card">
+                    <h3>Poli Gigi</h3>
+                    <p>Perawatan gigi dan mulut modern untuk keluarga.</p>
+                </div>
+                <div class="card">
+                    <h3>Laboratorium</h3>
+                    <p>Cek darah dan diagnosa akurat dengan alat terkini.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="registrasi">
+            <h2 class="section-title">Registrasi Pasien Baru</h2>
+            <form id="registrationForm" novalidate>
+                <div class="input-group">
+                    <label>Nama Lengkap (Text):</label>
+                    <input type="text" id="nama" placeholder="Contoh: Budi Santoso">
+                    <span class="error-msg" id="err-nama"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Email (Email):</label>
+                    <input type="email" id="email" placeholder="contoh@mail.com">
+                    <span class="error-msg" id="err-email"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Password (Password):</label>
+                    <input type="password" id="password" placeholder="Min. 6 karakter">
+                    <span class="error-msg" id="err-password"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Nomor Telepon (Number):</label>
+                    <input type="number" id="telepon" placeholder="0812345678">
+                    <span class="error-msg" id="err-telepon"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Jenis Kelamin (Radio):</label>
+                    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jk" value="Perempuan"> Perempuan
+                    <span class="error-msg" id="err-jk"></span>
+                </div>
+
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="produk-dinamis">
+            <h2 class="section-title">Daftar Artikel Kesehatan</h2>
+            <div id="article-list" class="dynamic-container">
+                </div>
+            
+            <div class="add-item-box">
+                <h4>Tambah Artikel Baru</h4>
+                <input type="text" id="newTitle" placeholder="Judul Artikel">
+                <button onclick="addItem()">Tambah</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Klinik Sehat Sentosa - Teknologi Informasi UMSU</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
